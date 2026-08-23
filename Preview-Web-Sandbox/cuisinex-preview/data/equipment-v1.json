@@ -1,0 +1,35 @@
+{
+  "schema": "cuisinex-equipment-inventory@1",
+  "version": "V1-RC1",
+  "updated_at": "2026-08-23",
+  "equipment": [
+    {
+      "id":"EQP-NINJA-AF500EU","name":{"fr":"Ninja Foodi FlexDrawer AF500EU"},"summary":{"fr":"Friteuse sans huile FlexDrawer 10,4 L, 2470 W."},"brand":"Ninja","model":"AF500EU","category":"air_fryer","status":"owned",
+      "purchase":{"date":"2026-08-21","retailer":"Darty","retailer_url":"https://www.darty.com/","price_eur":179.99,"acquired_date":"2026-08-21","warranty_end":"2028-08-21"},
+      "manufacturer":{"name":"SharkNinja / Ninja","url":"https://ninjakitchen.fr/","support_url":"https://support.ninjakitchen.fr/hc/fr/articles/17718607823388-S%C3%A9rie-AF500EU-Friteuse-sans-huile-Ninja-Foodi-Flex-FAQ"},
+      "manual":{"status":"uploaded_in_conversation_not_repo","official_url":"https://ninjakitchen.fr/INTERSHOP/web/WFS/SharkNinja-FR-Site/fr_FR/ninjafr/EUR/ViewProductAttachment-OpenFile?DirectoryPath=&FileName=AF500EU_IB_MP_230526_Mv1_LR.pdf&LocaleId=&UnitName=SharkNinja-FR"},
+      "technical":{"capacity_l":10.4,"power_w":2470,"voltage":"220-240 V","frequency":"50-60 Hz","functions":["Max Crisp","Air Fry","Roast","Reheat","Dehydrate","Bake","Prove"]}
+    },
+    {
+      "id":"EQP-MOULINEX-CE705100","name":{"fr":"Moulinex Cookeo 6 L CE705100"},"summary":{"fr":"Multicuiseur électrique sous pression Cookeo, capacité 6 L / utile 4 L."},"brand":"Moulinex","model":"CE705100","category":"electric_pressure_multicooker","status":"owned",
+      "purchase":{"date":"2018-02-19","retailer":"Darty","retailer_url":"https://www.darty.com/","price_eur":null,"acquired_date":"2018-02-22","warranty_end":null},
+      "manufacturer":{"name":"Moulinex / Groupe SEB","url":"https://www.moulinex.fr/","support_url":"https://www.moulinex.fr/notices/cuisson-electrique/autocuiseur-electrique/cookeo-6l-50-recettes/csp/7211002928"},
+      "manual":{"status":"uploaded_in_conversation_not_repo","official_url":"https://www.moulinex.fr/notices/cuisson-electrique/autocuiseur-electrique/cookeo-6l-50-recettes/csp/7211002928"},
+      "technical":{"series":"EPC03","capacity_total_l":6,"capacity_useful_l":4,"low_pressure_kpa":40,"low_pressure_temp_c":109,"high_pressure_kpa":70,"high_pressure_temp_c":115}
+    },
+    {
+      "id":"EQP-ELECTROLUX-EHH6333FOK","name":{"fr":"Plaque induction Electrolux EHH6333FOK"},"summary":{"fr":"Plaque induction 3 zones, puissance totale 7,4 kW."},"brand":"Electrolux","model":"EHH6333FOK","category":"induction_hob","status":"owned",
+      "purchase":{"date":null,"retailer":"Darty","retailer_url":"https://www.darty.com/","price_eur":null,"acquired_date":"2016-11-03","warranty_end":null},
+      "manufacturer":{"name":"Electrolux","url":"https://www.electrolux.fr/","support_url":"https://shop.electrolux.fr/model/m/EHH6333FOK%20IZ4"},
+      "manual":{"status":"uploaded_in_conversation_not_repo","official_url":null},
+      "technical":{"pnc_manual":"94959616700","power_total_kw":7.4,"voltage":"220-240 V","frequency":"50-60 Hz"}
+    },
+    {
+      "id":"EQP-AREBOS-AR-HE-EA28TW","name":{"fr":"Stérilisateur automatique Arebos 28 L 2500 W"},"summary":{"fr":"Stérilisateur / conservateur électrique 28 L, thermostat 30–110 °C."},"brand":"Arebos","model":"AR-HE-EA28TW","category":"electric_preserver","status":"ordered_in_transit",
+      "purchase":{"date":"2026-08-21","retailer":"Amazon.fr","retailer_url":"https://www.amazon.fr/","price_eur":89.90,"delivery_window":"2026-08-29/2026-08-31","acquired_date":null,"warranty_end":null},
+      "manufacturer":{"name":"Arebos","url":"https://www.arebos.fr/","product_url":"https://www.arebos.fr/fr_fr/home-living/kuche/cuiseur-a-vin-chaud/sterilisateur-automatique-28l-2500w-1.html"},
+      "manual":{"status":"external_only","official_url":"https://about.arebos.de/shared-files/5408/?Einkochautomat_2500W_EN.pdf="},
+      "technical":{"capacity_l":28,"power_w":2500,"temperature_min_c":30,"temperature_max_c":110,"voltage":"220-240 V","thermostat":true,"integrated_tap":true}
+    }
+  ]
+}
