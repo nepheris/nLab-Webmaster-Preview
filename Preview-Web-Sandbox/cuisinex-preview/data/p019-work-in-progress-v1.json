@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "schema": "cuisinex-catalog-v1",
+    "source": "P019 authoring + SQL V1",
+    "language": "fr",
+    "purpose": "Expose les recettes P019 suivies mais absentes du catalogue de preview principal, sans modifier leur statut métier."
+  },
+  "recipes": [
+    {
+      "id": "REC-002",
+      "status": "draft",
+      "title": {"fr": "Ganache montée Milka Oreo — crème 30 %"},
+      "summary": {"fr": "Recette P019 en cours de rédaction ; formulation et validation finale à compléter."},
+      "tags": ["P019", "chocolat", "ganache", "draft"],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"
+    },
+    {
+      "id": "REC-003",
+      "status": "draft",
+      "title": {"fr": "Mousse Milka Oreo aux œufs"},
+      "summary": {"fr": "Recette P019 en cours ; non validée."},
+      "tags": ["P019", "chocolat", "mousse", "draft"],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"
+    },
+    {
+      "id": "REC-004",
+      "status": "draft",
+      "title": {"fr": "Duo chocolat & chantilly fouettée"},
+      "summary": {"fr": "Recette P019 en cours ; non validée."},
+      "tags": ["P019", "chocolat", "chantilly", "draft"],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"
+    },
+    {
+      "id": "REC-005",
+      "status": "canonical",
+      "title": {"fr": "Ganache montée Côte d'Or Praliné Double Lait — crème Envia UHT 30 %"},
+      "summary": {"fr": "Recette testée et validée dans P019 ; fiche auteur canonique disponible."},
+      "tags": ["P019", "chocolat", "ganache", "canonical"],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-005-ganache-montee-cote-dor-praline-creme-30.md"
+    },
+    {
+      "id": "REC-101",
+      "status": "draft",
+      "title": {"fr": "Glace banane — crème 35 %"},
+      "summary": {"fr": "Variante P019 en cours de documentation."},
+      "tags": ["P019", "glace", "banane", "draft"],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"
+    },
+    {
+      "id": "REC-102",
+      "status": "canonical",
+      "title": {"fr": "Glace banane — crème UHT 30 %"},
+      "summary": {"fr": "Recette P019 testée et validée ; la fiche auteur canonique prévaut sur le statut SQL historique."},
+      "servings": 6,
+      "scalable": true,
+      "tags": ["P019", "glace", "banane", "canonical"],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-102-glace-banane-creme-30.md"
+    },
+    {
+      "id": "REC-111",
+      "status": "draft",
+      "title": {"fr": "Sorbet prune — sirop sucre"},
+      "summary": {"fr": "Recette P019 en cours ; paramètres finaux à valider."},
+      "tags": ["P019", "sorbet", "prune", "draft"],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"
+    },
+    {
+      "id": "REC-112",
+      "status": "draft",
+      "title": {"fr": "Sorbet pêche — sucre + miel"},
+      "summary": {"fr": "Recette P019 en cours ; paramètres finaux à valider."},
+      "tags": ["P019", "sorbet", "pêche", "draft"],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"
+    },
+    {
+      "id": "REC-201",
+      "status": "draft",
+      "title": {"fr": "Pâtes aux pleurotes, échalote et crème"},
+      "summary": {"fr": "Recette P019 en cours de structuration."},
+      "tags": ["P019", "pâtes", "pleurotes", "draft"],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"
+    }
+  ]
+}
