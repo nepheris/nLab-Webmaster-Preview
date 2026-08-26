@@ -1,7 +1,7 @@
 (() => {
   const BRAND='Cuisine X';
-  const VERSION='V1 RC1.5 FR';
-  const UPDATED='2026-08-27 01:16 Europe/Paris';
+  const VERSION='V1 RC1.6 FR';
+  const UPDATED='2026-08-27 01:20 Europe/Paris';
   function apply(){
     document.title=`${BRAND} — ${VERSION}`;
     document.querySelectorAll('#siteHeader .brand').forEach(el=>{
