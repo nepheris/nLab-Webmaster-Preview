@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "schema": "cuisinex-integration-catchup-v1",
+    "version": "2026-08-26",
+    "language": "fr",
+    "status": "integration_candidate",
+    "note": "Données ajoutées sans promotion artificielle des statuts. Les valeurs inconnues restent À_VALIDER."
+  },
+  "recipes": [
+    {
+      "id": "NINJA-EXP-001",
+      "status": "experiment_candidate",
+      "title": {"fr": "Ninja AF500EU — caviar d’aubergine"},
+      "summary": {"fr": "Protocole d’essai destiné à explorer le rôtissage de l’aubergine au Ninja. Formulation à verrouiller avec les ingrédients exacts avant essai."},
+      "chef": "🥘 Cuisinix · 🧠 Recetix",
+      "tags": ["P019","Ninja","AF500EU","expérimental","aubergine","Roast","Air Fry"],
+      "equipment": ["EQP-NINJA-AF500EU"],
+      "last_updated": "2026-08-26",
+      "nutrition": {"status":"not_calculable","message":{"fr":"Ingrédients et masses exacts à valider avant calcul nutritionnel."}},
+      "validation_requirements": ["liste exacte des ingrédients","masses en grammes","mode Ninja","température","durée","charge","REX"]
+    },
+    {
+      "id": "NINJA-EXP-002",
+      "status": "experiment_candidate",
+      "title": {"fr": "Ninja AF500EU — cake salé"},
+      "summary": {"fr": "Essai Bake destiné à caractériser cuisson, levée, coloration et homogénéité. Recette exacte à formuler après identification des ingrédients."},
+      "chef": "🎂 Patisserix · 🥘 Cuisinix",
+      "tags": ["P019","Ninja","AF500EU","expérimental","cake","Bake"],
+      "equipment": ["EQP-NINJA-AF500EU"],
+      "last_updated": "2026-08-26",
+      "nutrition": {"status":"not_calculable","message":{"fr":"Formulation exacte non verrouillée."}}
+    },
+    {
+      "id": "NINJA-EXP-003",
+      "status": "experiment_candidate",
+      "title": {"fr": "Ninja AF500EU — petit pain"},
+      "summary": {"fr": "Essai Prove + Bake pour explorer fermentation, poussée et cuisson du pain dans le Ninja."},
+      "chef": "🎂 Patisserix",
+      "tags": ["P019","Ninja","AF500EU","expérimental","pain","Prove","Bake"],
+      "equipment": ["EQP-NINJA-AF500EU"],
+      "last_updated": "2026-08-26",
+      "nutrition": {"status":"not_calculable","message":{"fr":"Farine, levure, eau et masses exactes à valider avant formulation."}}
+    },
+    {
+      "id": "NINJA-EXP-004",
+      "status": "experiment_candidate",
+      "title": {"fr": "Ninja AF500EU — brioche"},
+      "summary": {"fr": "Essai Prove + Bake pour explorer fermentation enrichie, développement et coloration d’une brioche."},
+      "chef": "🎂 Patisserix",
+      "tags": ["P019","Ninja","AF500EU","expérimental","brioche","Prove","Bake"],
+      "equipment": ["EQP-NINJA-AF500EU"],
+      "last_updated": "2026-08-26",
+      "nutrition": {"status":"not_calculable","message":{"fr":"Farine, beurre, lait, œufs et levure exacts à valider."}}
+    },
+    {
+      "id": "NINJA-EXP-005",
+      "status": "experiment_candidate",
+      "title": {"fr": "Ninja AF500EU — bananes déshydratées"},
+      "summary": {"fr": "Essai Dehydrate destiné à documenter épaisseur, rendement, texture et temps de séchage."},
+      "chef": "🥘 Cuisinix · 🧠 Recetix",
+      "tags": ["P019","Ninja","AF500EU","expérimental","banane","Dehydrate","anti-gaspi"],
+      "equipment": ["EQP-NINJA-AF500EU"],
+      "last_updated": "2026-08-26"
+    },
+    {
+      "id": "NINJA-EXP-006",
+      "status": "experiment_candidate",
+      "title": {"fr": "Ninja AF500EU — tomates semi-séchées"},
+      "summary": {"fr": "Essai Dehydrate destiné à caractériser texture semi-séchée, perte de masse et conservation à valider séparément."},
+      "chef": "🥘 Cuisinix · 🧠 Recetix",
+      "tags": ["P019","Ninja","AF500EU","expérimental","tomate","Dehydrate","anti-gaspi"],
+      "equipment": ["EQP-NINJA-AF500EU"],
+      "last_updated": "2026-08-26"
+    },
+    {
+      "id": "NINJA-EXP-007",
+      "status": "experiment_candidate",
+      "title": {"fr": "Ninja AF500EU — légumes rôtis"},
+      "summary": {"fr": "Essai Roast/Air Fry pour mesurer coloration, dessiccation et homogénéité selon calibre et charge."},
+      "chef": "🥘 Cuisinix",
+      "tags": ["P019","Ninja","AF500EU","expérimental","légumes","Roast","Air Fry"],
+      "equipment": ["EQP-NINJA-AF500EU"],
+      "last_updated": "2026-08-26"
+    },
+    {
+      "id": "NINJA-EXP-008",
+      "status": "experiment_candidate",
+      "title": {"fr": "Ninja AF500EU — fruits rôtis"},
+      "summary": {"fr": "Essai Roast destiné à explorer fruits de saison, concentration aromatique et texture."},
+      "chef": "🎂 Patisserix · 🥘 Cuisinix",
+      "tags": ["P019","Ninja","AF500EU","expérimental","fruits","Roast"],
+      "equipment": ["EQP-NINJA-AF500EU"],
+      "last_updated": "2026-08-26"
+    },
+    {
+      "id": "NINJA-EXP-009",
+      "status": "experiment_candidate",
+      "title": {"fr": "Ninja AF500EU — repas deux zones Sync"},
+      "summary": {"fr": "Essai fonctionnel des deux zones et de la synchronisation de fin de cuisson avec deux préparations différentes."},
+      "chef": "🥘 Cuisinix · 🧠 Recetix",
+      "tags": ["P019","Ninja","AF500EU","expérimental","Sync","deux zones","repas"],
+      "equipment": ["EQP-NINJA-AF500EU"],
+      "last_updated": "2026-08-26"
+    }
+  ],
+  "equipment": [
+    {"id":"EQP-THERMOPLONGEUR","name":{"fr":"Thermoplongeur sous-vide"},"category":"sous_vide","status":"owned","last_updated":"2026-08-26","technical_status":"À_VALIDER","notes":{"fr":"Modèle exact non documenté dans la projection actuelle."}},
+    {"id":"EQP-MACHINE-SOUS-VIDE","name":{"fr":"Machine sous vide domestique"},"category":"vacuum_sealer","status":"owned","last_updated":"2026-08-26","technical_status":"À_VALIDER"},
+    {"id":"EQP-SORBETIERE-SILVERCREST","name":{"fr":"Sorbetière SilverCrest 1 L"},"brand":"SilverCrest","category":"ice_cream_maker","status":"owned","last_updated":"2026-08-26","technical":{"capacity_l":1,"cooling":"bol accumulateur — ne produit pas de froid"},"identification_status":"modèle/IAN À_VALIDER"},
+    {"id":"EQP-COCOTTE-MINUTE","name":{"fr":"Cocotte-minute / autocuiseur"},"category":"pressure_cooker","status":"owned","last_updated":"2026-08-26","technical_status":"À_VALIDER"},
+    {"id":"EQP-FOUR","name":{"fr":"Four domestique"},"category":"oven","status":"owned","last_updated":"2026-08-26","technical_status":"modèle À_VALIDER"},
+    {"id":"EQP-MICRO-ONDES","name":{"fr":"Four à micro-ondes"},"category":"microwave","status":"owned","last_updated":"2026-08-26","technical_status":"modèle À_VALIDER"},
+    {"id":"EQP-ROBOT","name":{"fr":"Robot de cuisine"},"category":"food_processor","status":"owned","last_updated":"2026-08-26","technical_status":"modèle À_VALIDER"},
+    {"id":"EQP-BLENDER","name":{"fr":"Blender"},"category":"blender","status":"owned","last_updated":"2026-08-26","technical_status":"modèle À_VALIDER"},
+    {"id":"EQP-MIXEUR-PLONGEANT","name":{"fr":"Mixeur plongeant"},"category":"immersion_blender","status":"owned","last_updated":"2026-08-26","technical_status":"modèle À_VALIDER"},
+    {"id":"EQP-CUISEUR-RIZ","name":{"fr":"Cuiseur à riz"},"category":"rice_cooker","status":"owned","last_updated":"2026-08-26","technical_status":"modèle À_VALIDER"},
+    {"id":"EQP-WOK","name":{"fr":"Wok"},"category":"pan","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-SIPHON","name":{"fr":"Siphon culinaire"},"category":"siphon","status":"owned","last_updated":"2026-08-26","technical_status":"capacité À_VALIDER"},
+    {"id":"EQP-MANDOLINE","name":{"fr":"Mandoline"},"category":"manual_tool","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-RAPE","name":{"fr":"Râpe"},"category":"manual_tool","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-ZESTEUR","name":{"fr":"Zesteur"},"category":"manual_tool","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-BALANCE","name":{"fr":"Balance de cuisine"},"category":"scale","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-CASSEROLES-INOX","name":{"fr":"Casseroles inox"},"category":"cookware","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-POELES","name":{"fr":"Poêles antiadhésives / inox"},"category":"cookware","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-COUSCOUSSIER","name":{"fr":"Couscoussier"},"category":"steamer","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-CADRE-PATISSIER","name":{"fr":"Cadre pâtissier"},"category":"bakeware","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-TAPIS-SILICONE","name":{"fr":"Tapis silicone"},"category":"bakeware","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-ENTONNOIR-PISTON","name":{"fr":"Entonnoir à piston"},"category":"manual_tool","status":"owned","last_updated":"2026-08-26"},
+    {"id":"EQP-POTS-VERRE","name":{"fr":"Pots en verre"},"category":"preservation","status":"owned","last_updated":"2026-08-26"}
+  ],
+  "library": [
+    {
+      "id":"RES-CIQUAL-2025",
+      "category":"institutionnel",
+      "title":"Anses — Table Ciqual 2025",
+      "summary":{"fr":"Référentiel français de composition nutritionnelle utilisé comme source prioritaire pour les ingrédients génériques."},
+      "url":"https://ciqual.anses.fr/cms/fr/la-table-ciqual-2025",
+      "tags":["nutrition","Ciqual","Anses","source primaire"],
+      "last_updated":"2026-08-26",
+      "key_points":["3 484 aliments dans la version 2025","74 constituants","chaque aliment est identifié par un alim_code","les mappings CuisineX non vérifiés restent À_VALIDER"]
+    },
+    {
+      "id":"RES-FRANCEAGRIMER-RNM",
+      "category":"institutionnel",
+      "title":"FranceAgriMer — Réseau des nouvelles des marchés (RNM)",
+      "summary":{"fr":"Source de cotations et d’informations de marché pour les produits frais ; utile pour contextualiser prix, campagnes et saisonnalité commerciale."},
+      "url":"https://rnm.franceagrimer.fr/",
+      "tags":["prix","marché","fruits","légumes","saisonnalité","FranceAgriMer"],
+      "last_updated":"2026-08-26",
+      "key_points":["toujours conserver date, unité et stade de marché","une cotation RNM n’est pas automatiquement un prix consommateur","utiliser les bilans de campagne lorsqu’ils existent"]
+    }
+  ]
+}
