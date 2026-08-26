@@ -1,7 +1,7 @@
 {
   "project_id": "recettes-du-coeur-preview",
   "display_name": "Les Recettes du Cœur",
-  "description": "Preview de développement P002 : V1 visible, volontairement courte, orientée recettes, anti-gaspi et mode J'ai ces ingrédients.",
+  "description": "Preview de développement P002 : VNext basée sur le site public V73.2, espace Dev retiré du parcours, données structurées réutilisées et éditorial déplacé vers Markdown dans le package de déploiement.",
   "repository": "recettesducoeur/recettesducoeur.github.io",
   "visual": {
     "type": "project",
@@ -10,8 +10,9 @@
   "production": "https://recettesducoeur.github.io/",
   "preview_status": {
     "state": "to_review",
-    "label": "MVP V0.1 — front door visible à développer",
-    "candidate": "V0.1",
-    "publication_scope": "preview_only"
+    "label": "VNext 0.2 — site complet à valider avant déploiement public",
+    "candidate": "VNext-0.2",
+    "publication_scope": "preview_only",
+    "path": "20260826_195000_V0.2/index.html"
   }
 }
