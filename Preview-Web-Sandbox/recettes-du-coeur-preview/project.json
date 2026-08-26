@@ -1,0 +1,17 @@
+{
+  "project_id": "recettes-du-coeur-preview",
+  "display_name": "Les Recettes du Cœur",
+  "description": "Preview de développement P002 : V1 visible, volontairement courte, orientée recettes, anti-gaspi et mode J'ai ces ingrédients.",
+  "repository": "recettesducoeur/recettesducoeur.github.io",
+  "visual": {
+    "type": "project",
+    "label": "P002"
+  },
+  "production": "https://recettesducoeur.github.io/",
+  "preview_status": {
+    "state": "to_review",
+    "label": "MVP V0.1 — front door visible à développer",
+    "candidate": "V0.1",
+    "publication_scope": "preview_only"
+  }
+}

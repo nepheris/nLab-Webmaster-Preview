@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Les Recettes du Cœur — MVP</title>
+<meta name="description" content="Des recettes simples, solidaires et anti-gaspillage avec ce que vous avez sous la main.">
+<style>
+:root{--green:#2f6f4e;--green2:#eaf4ee;--ink:#1f2a23;--muted:#67736b;--line:#d9e3dc;--cream:#fffaf1;--shadow:0 10px 30px rgba(31,42,35,.09)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff}
+a{color:inherit}.wrap{width:min(1120px,92vw);margin:auto}.top{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:850;text-decoration:none}.navlinks{display:flex;gap:10px;flex-wrap:wrap}
+.navlinks a,.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:11px 16px;font-weight:750}.navlinks a:hover{background:var(--green2)}
+.btn{background:var(--green);color:#fff}.btn.alt{background:#fff;color:var(--green);border:1px solid #bfd4c6}.hero{background:linear-gradient(135deg,var(--cream),var(--green2));padding:58px 0}
+.heroGrid{display:grid;grid-template-columns:1.3fr .7fr;gap:42px;align-items:center}.eyebrow{font-size:.84rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+h1{font-size:clamp(2.5rem,6vw,5.2rem);line-height:.94;margin:.35em 0 .25em}.lead{font-size:1.2rem;line-height:1.6;color:#3f4d44;max-width:700px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.heroLogo{font-size:8rem;text-align:center}.section{padding:58px 0}.section h2{font-size:2rem;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 24px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.cardVisual{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:4rem;background:linear-gradient(135deg,#f5efe3,#edf6ef)}
+.cardBody{padding:18px}.card h3{margin:0 0 6px;font-size:1.1rem}.card p{margin:0;color:var(--muted)}
+.band{background:var(--green);color:white}.bandGrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.band h2{font-size:2rem;margin:0 0 10px}.band p{color:#e9f4ed;line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.step{background:rgba(255,255,255,.11);padding:18px;border-radius:16px}.step strong{display:block;margin-bottom:6px}
+.footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.94rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.notice{padding:10px 14px;background:#fff3cd;border:1px solid #ffe69c;border-radius:12px;margin-top:18px;color:#664d03;font-size:.95rem}
+@media(max-width:760px){.heroGrid,.bandGrid{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr}.navlinks a:not(.btn){display:none}.hero{padding:38px 0}.section{padding:42px 0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav"><a class="brand" href="#">💚 Les Recettes du Cœur</a><nav class="navlinks"><a href="#recettes">Recettes</a><a href="#mode-frigo">J'ai ces ingrédients</a><a class="btn" href="#recettes">Commencer</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap heroGrid"><div><div class="eyebrow">MVP visible • cuisine anti-gaspi</div><h1>Que peut-on cuisiner avec ce qu’on a déjà ?</h1>
+<p class="lead">Des recettes simples, des astuces utiles et un moteur pour partir de vos ingrédients. On publie d’abord une version qui fonctionne, puis on l’améliore petit à petit.</p>
+<div class="actions"><a class="btn" href="#recettes">🍲 Voir les recettes</a><a class="btn alt" href="#mode-frigo">🥕 J’ai ces ingrédients</a></div>
+<div class="notice">Preview de développement : aucun changement n’est appliqué au site public tant que cette version n’est pas validée.</div>
+</div><div class="heroLogo">🥕💚🍲</div></div></section>
+
+<section class="section" id="recettes"><div class="wrap"><h2>Commencer par quelque chose de bon</h2><p class="sub">Le corpus actuel de 13 recettes suffit pour une première version utile.</p><div class="cards">
+<article class="card"><div class="cardVisual">🍝</div><div class="cardBody"><h3>Gratin de pâtes au thon</h3><p>Simple, familial et pratique.</p></div></article>
+<article class="card"><div class="cardVisual">🥣</div><div class="cardBody"><h3>Soupe de légumes simple</h3><p>Parfait pour valoriser les légumes disponibles.</p></div></article>
+<article class="card"><div class="cardVisual">🍳</div><div class="cardBody"><h3>Omelette aux légumes</h3><p>Rapide, adaptable et anti-gaspi.</p></div></article>
+</div></div></section>
+
+<section class="section band" id="mode-frigo"><div class="wrap bandGrid"><div><h2>Le mode “J’ai ces ingrédients”</h2>
+<p>Entrez ce que vous avez. Le site compare avec les recettes et vous aide à voir ce qui est possible et ce qui manque. C’est la fonction différenciante à mettre en avant dès la V1.</p></div>
+<div class="steps"><div class="step"><strong>1. Saisissez</strong>Vos ingrédients disponibles.</div><div class="step"><strong>2. Comparez</strong>Les recettes compatibles.</div><div class="step"><strong>3. Cuisinez</strong>Avec le moins de gaspillage possible.</div></div></div></section>
+
+<section class="section"><div class="wrap"><h2>V1 volontairement courte</h2><p class="sub">Trois portes d’entrée suffisent pour commencer à créer de la valeur.</p><div class="cards">
+<article class="card"><div class="cardVisual">🍲</div><div class="cardBody"><h3>Recettes</h3><p>13 recettes déjà disponibles, consultables et enrichissables.</p></div></article>
+<article class="card"><div class="cardVisual">💡</div><div class="cardBody"><h3>Astuces</h3><p>Des idées concrètes anti-gaspi, à enrichir progressivement.</p></div></article>
+<article class="card"><div class="cardVisual">🥕</div><div class="cardBody"><h3>Ingrédients</h3><p>Référentiel existant, avec Ciqual à brancher sans bloquer la sortie.</p></div></article>
+</div></div></section>
+</main>
+<footer class="footer"><div class="wrap foot"><div>💚 Les Recettes du Cœur — MVP Preview</div><div>Publier d’abord, améliorer ensuite.</div></div></footer>
+</body>
+</html>
