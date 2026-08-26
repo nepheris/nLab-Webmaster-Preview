@@ -4,7 +4,7 @@
     "source": "P019 authoring + SQL V1 + Chef shared candidates",
     "language": "fr",
     "purpose": "Expose les recettes P019 et candidates Chef suivies mais absentes du catalogue de preview principal, sans modifier leur statut métier.",
-    "updated_at": "2026-08-26"
+    "updated_at": "2026-08-27"
   },
   "recipes": [
     {"id":"REC-002","status":"draft","title":{"fr":"Ganache montée Milka Oreo — crème 30 %"},"summary":{"fr":"Recette P019 en cours de rédaction ; formulation et validation finale à compléter."},"tags":["P019","chocolat","ganache","draft"],"source_url":"https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"},
@@ -18,6 +18,47 @@
     {"id":"REC-112","status":"draft","title":{"fr":"Sorbet pêche — sucre + miel"},"summary":{"fr":"Recette P019 en cours ; paramètres finaux à valider."},"tags":["P019","sorbet","pêche","draft"],"source_url":"https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"},
     {"id":"REC-113","status":"candidate","title":{"fr":"Sorbet pomme–clémentine au sirop de sucre"},"summary":{"fr":"Candidate legacy à tester : formulation au sirop 1:1 et ratio de travail 0,32 × masse de fruits. Aucun turbinage validé dans la source."},"scalable":true,"tags":["P019","sorbet","pomme","clémentine","candidate"],"chef":"🧠 Recetix · 🧪 Moleculix · 🥗 Nutritioneix","source_url":"https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-113-sorbet-pomme-clementine-sirop-sucre.md"},
     {"id":"REC-201","status":"draft","title":{"fr":"Pâtes aux pleurotes, échalote et crème"},"summary":{"fr":"Recette P019 en cours de structuration."},"tags":["P019","pâtes","pleurotes","draft"],"source_url":"https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"},
+    {
+      "id":"REC-202",
+      "status":"candidate",
+      "title":{"fr":"Penne crémeuses au Roquefort, jambon blanc et champignons"},
+      "summary":{"fr":"Candidate CuisineX formulée sur une brique de 200 ml de crème UHT liquide 30 % MG. Sauce Roquefort adoucie par la crème, champignons de Paris décongelés et bien égouttés, jambon ajouté en fin de cuisson. Non testée à ce stade."},
+      "chef":"🍝 Roberto · 🥘 Cuisinix · 🧠 Recetix",
+      "servings":2.5,
+      "servings_min":0.5,
+      "servings_max":12,
+      "scalable":true,
+      "practical_servings":{"fr":"2 portions généreuses ou 3 portions normales"},
+      "tags":["P019","pâtes","penne","Roquefort","jambon blanc","champignons","crème 30 %","candidate"],
+      "ingredients":[
+        {"id":"ING-PENNE-SECHES","label":{"fr":"Penne sèches"},"mass_g":225,"scale_value":225,"scale_unit":"g","role":"primary"},
+        {"id":"ING-CHAMPIGNONS-PARIS-SURGELES","label":{"fr":"Champignons de Paris surgelés, décongelés et égouttés"},"mass_g":250,"scale_value":250,"scale_unit":"g","role":"primary"},
+        {"id":"ING-JAMBON-BLANC","label":{"fr":"Jambon blanc"},"mass_g":150,"scale_value":150,"scale_unit":"g","role":"primary"},
+        {"id":"ING-ECHALOTE","label":{"fr":"Échalote"},"mass_g":50,"scale_value":50,"scale_unit":"g","role":"secondary"},
+        {"id":"ING-ROQUEFORT","label":{"fr":"Roquefort standard"},"mass_g":75,"scale_value":75,"scale_unit":"g","role":"primary"},
+        {"id":"ING-CREME-UHT-30","label":{"fr":"Crème UHT liquide 30 % MG"},"display_quantity":"200 ml","scale_value":200,"scale_unit":"ml","role":"primary"},
+        {"id":"ING-HUILE-OLIVE","label":{"fr":"Huile d’olive"},"mass_g":10,"scale_value":10,"scale_unit":"g","role":"secondary"},
+        {"id":"ING-POIVRE-NOIR","label":{"fr":"Poivre noir"},"mass_g":0.6,"scale_value":0.6,"scale_unit":"g","role":"secondary"},
+        {"id":"ING-EAU-CUISSON-PATES","label":{"fr":"Eau de cuisson des pâtes"},"display_quantity":"75 à 125 g, selon texture","role":"optional","note":{"fr":"Ajouter progressivement ; cette quantité n’est pas un ingrédient proportionnel fixe."}}
+      ],
+      "steps":[
+        {"fr":"Décongeler les champignons au réfrigérateur, idéalement dans une passoire posée sur un récipient, puis bien les égoutter avant cuisson."},
+        {"fr":"Cuire les penne al dente. Réserver environ 125 g d’eau de cuisson avant égouttage."},
+        {"fr":"Faire revenir l’échalote dans l’huile, puis ajouter les champignons et cuire jusqu’à évaporation nette de leur eau."},
+        {"fr":"Ajouter le jambon blanc coupé et le chauffer brièvement, environ 1 à 2 minutes, sans le dessécher."},
+        {"fr":"Ajouter la crème UHT 30 %, chauffer doucement puis incorporer le Roquefort émietté. Faire fondre sans forte ébullition prolongée."},
+        {"fr":"Ajouter les penne et mélanger. Régler la texture avec l’eau de cuisson, progressivement."},
+        {"fr":"Poivrer, goûter avant tout ajout de sel : le Roquefort et le jambon apportent déjà une salinité importante."}
+      ],
+      "technical":[
+        {"label":{"fr":"Gestion des champignons"},"value":"décongelés + égouttés","range":"évaporer l’eau avant ajout de la crème"},
+        {"label":{"fr":"Sauce Roquefort"},"value":"chauffe douce","range":"éviter une forte ébullition prolongée"},
+        {"label":{"fr":"Ratio Roquefort / crème"},"value":"75 g / 200 ml","range":"base candidate à tester"}
+      ],
+      "nutrition":{"status":"not_calculable","message":{"fr":"Calcul nutritionnel à faire après mapping exact des ingrédients et produits utilisés."}},
+      "safety":{"allergens_status":"partial","allergens_confirmed":["lait","gluten"],"alcohol":false,"pork":true},
+      "last_updated":"2026-08-27"
+    },
     {"id":"REC-301","status":"draft","title":{"fr":"Kéfir d’eau aux figues sèches"},"summary":{"fr":"Formulation legacy 60 g grains / 60 g sucre / 60 g figues / 2 L eau. Non déclarée testée puis validée ; paramètres de fermentation et sécurité à revoir avant canonisation."},"tags":["P019","kéfir","fermentation","boisson","draft","À_VALIDER"],"chef":"🧪 Moleculix","source_url":"https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-301-kefir-eau-figues.md"},
     {"id":"CHEF-20260825-006","status":"candidate","title":{"fr":"Pommes de terre farcies aux champignons et brie"},"summary":{"fr":"Candidate Chef mutualisée : 4 pommes de terre farcies, champignons, brie et crème. Revue culinaire candidate ; aucun essai réel prouvé."},"servings":4,"scalable":true,"tags":["Chef","P002","P019-view","pommes-de-terre","champignons","brie","candidate"],"ingredient_groups":{"primary":["pommes de terre à chair farineuse","champignons de Paris","brie"],"secondary":["échalote","crème liquide entière 30 % MG","huile","sel","poivre"]},"source_url":"https://github.com/nepheris/nLab/blob/main/nLab-System/AI-Pilot-Center/Autonomous-Cockpit/Chef/Recipes/Candidates/20260825-006-pommes-de-terre-farcies-champignons-brie.json"}
   ]
