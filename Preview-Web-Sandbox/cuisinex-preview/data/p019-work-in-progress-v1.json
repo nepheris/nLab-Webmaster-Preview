@@ -1,9 +1,10 @@
 {
   "meta": {
     "schema": "cuisinex-catalog-v1",
-    "source": "P019 authoring + SQL V1",
+    "source": "P019 authoring + SQL V1 + Chef shared candidates",
     "language": "fr",
-    "purpose": "Expose les recettes P019 suivies mais absentes du catalogue de preview principal, sans modifier leur statut métier."
+    "purpose": "Expose les recettes P019 et candidates Chef suivies mais absentes du catalogue de preview principal, sans modifier leur statut métier.",
+    "updated_at": "2026-08-26"
   },
   "recipes": [
     {
@@ -37,6 +38,15 @@
       "summary": {"fr": "Recette testée et validée dans P019 ; fiche auteur canonique disponible."},
       "tags": ["P019", "chocolat", "ganache", "canonical"],
       "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-005-ganache-montee-cote-dor-praline-creme-30.md"
+    },
+    {
+      "id": "REC-006",
+      "status": "candidate",
+      "title": {"fr": "Œufs de Pâques fourrés en chocolat"},
+      "summary": {"fr": "Candidate P019 issue du legacy : coques noir/blanc/bicolores et fourrage ganache. Non testée et non validée ; références exactes des chocolats à confirmer."},
+      "tags": ["P019", "pâtisserie", "chocolat", "candidate", "À_VALIDER"],
+      "chef": "🎂 Patisserix · 🧪 Moleculix",
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-006-oeufs-paques-fourres-chocolat.md"
     },
     {
       "id": "REC-101",
@@ -73,12 +83,45 @@
       "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"
     },
     {
+      "id": "REC-113",
+      "status": "candidate",
+      "title": {"fr": "Sorbet pomme–clémentine au sirop de sucre"},
+      "summary": {"fr": "Candidate legacy à tester : formulation au sirop 1:1 et ratio de travail 0,32 × masse de fruits. Aucun turbinage validé dans la source."},
+      "scalable": true,
+      "tags": ["P019", "sorbet", "pomme", "clémentine", "candidate"],
+      "chef": "🧠 Recetix · 🧪 Moleculix · 🥗 Nutritioneix",
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-113-sorbet-pomme-clementine-sirop-sucre.md"
+    },
+    {
       "id": "REC-201",
       "status": "draft",
       "title": {"fr": "Pâtes aux pleurotes, échalote et crème"},
       "summary": {"fr": "Recette P019 en cours de structuration."},
       "tags": ["P019", "pâtes", "pleurotes", "draft"],
       "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/data/sql/cuisinex-v1.sql"
+    },
+    {
+      "id": "REC-301",
+      "status": "draft",
+      "title": {"fr": "Kéfir d’eau aux figues sèches"},
+      "summary": {"fr": "Formulation legacy 60 g grains / 60 g sucre / 60 g figues / 2 L eau. Non déclarée testée puis validée ; paramètres de fermentation et sécurité à revoir avant canonisation."},
+      "tags": ["P019", "kéfir", "fermentation", "boisson", "draft", "À_VALIDER"],
+      "chef": "🧪 Moleculix",
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-301-kefir-eau-figues.md"
+    },
+    {
+      "id": "CHEF-20260825-006",
+      "status": "candidate",
+      "title": {"fr": "Pommes de terre farcies aux champignons et brie"},
+      "summary": {"fr": "Candidate Chef mutualisée : 4 pommes de terre farcies, champignons, brie et crème. Revue culinaire candidate ; aucun essai réel prouvé."},
+      "servings": 4,
+      "scalable": true,
+      "tags": ["Chef", "P002", "P019-view", "pommes-de-terre", "champignons", "brie", "candidate"],
+      "ingredient_groups": {
+        "primary": ["pommes de terre à chair farineuse", "champignons de Paris", "brie"],
+        "secondary": ["échalote", "crème liquide entière 30 % MG", "huile", "sel", "poivre"]
+      },
+      "source_url": "https://github.com/nepheris/nLab/blob/main/nLab-System/AI-Pilot-Center/Autonomous-Cockpit/Chef/Recipes/Candidates/20260825-006-pommes-de-terre-farcies-champignons-brie.json"
     }
   ]
 }
