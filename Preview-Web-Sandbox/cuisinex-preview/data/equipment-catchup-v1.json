@@ -1,0 +1,227 @@
+{
+  "schema": "cuisinex-equipment-catchup@1",
+  "updated_at": "2026-08-26",
+  "purpose": "Projection de rattrapage du matériel connu dans P019 mais sans fiche détaillée. Les références inconnues restent explicitement À_VALIDER.",
+  "equipment": [
+    {
+      "id": "EQP-THERMOPLONGEUR-UNIDENTIFIED",
+      "name": {"fr": "Thermoplongeur sous-vide"},
+      "summary": {"fr": "Thermoplongeur utilisé pour cuisson sous-vide et bains-marie régulés. Marque, modèle et puissance à confirmer."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "immersion_circulator",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-VACUUM-SEALER-UNIDENTIFIED",
+      "name": {"fr": "Machine sous vide domestique"},
+      "summary": {"fr": "Machine sous vide à rouleaux/sacs utilisée dans le projet. Référence exacte à identifier."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "vacuum_sealer",
+      "status": "owned_unidentified",
+      "technical": {"bag_system": "rouleau / sacs domestiques", "reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-SILVERCREST-ICECREAM-1L",
+      "name": {"fr": "Sorbetière SilverCrest 1 L"},
+      "summary": {"fr": "Sorbetière à cuve précongelée, capacité annoncée 1 L, sans groupe froid. Modèle/IAN à confirmer."},
+      "brand": "SilverCrest",
+      "model": "À_VALIDER",
+      "category": "ice_cream_maker",
+      "status": "owned_unidentified",
+      "technical": {"capacity_l": 1, "cooling": "cuve précongelée", "active_refrigeration": false, "validated_mix_load_g": 710, "provisional_operating_max_g": 800},
+      "manual": {"status": "À_VALIDER", "support_portal": "Lidl Service / IAN requis"}
+    },
+    {
+      "id": "EQP-OVEN-UNIDENTIFIED",
+      "name": {"fr": "Four domestique"},
+      "summary": {"fr": "Four utilisé pour pâtisserie, gratins et rôtissage. Marque/modèle et capacités à documenter."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "oven",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-MICROWAVE-UNIDENTIFIED",
+      "name": {"fr": "Four micro-ondes"},
+      "summary": {"fr": "Micro-ondes domestique présent dans l’inventaire Cuisine. Puissance et référence à documenter."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "microwave",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-FOOD-PROCESSOR-UNIDENTIFIED",
+      "name": {"fr": "Robot de cuisine / robot pâtissier"},
+      "summary": {"fr": "Robot mentionné dans l’inventaire Cuisine. Type exact, marque, modèle et accessoires à identifier."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "food_processor_or_mixer",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-BLENDER-UNIDENTIFIED",
+      "name": {"fr": "Blender"},
+      "summary": {"fr": "Blender utilisé pour soupes, sauces et préparations mixées. Référence à identifier."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "blender",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-HAND-BLENDER-UNIDENTIFIED",
+      "name": {"fr": "Mixeur plongeant"},
+      "summary": {"fr": "Mixeur plongeant présent dans l’inventaire Cuisine. Référence et accessoires à documenter."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "hand_blender",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-RICE-COOKER-UNIDENTIFIED",
+      "name": {"fr": "Cuiseur à riz"},
+      "summary": {"fr": "Cuiseur à riz présent dans l’inventaire Cuisine. Capacité et référence à confirmer."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "rice_cooker",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-WOK-UNIDENTIFIED",
+      "name": {"fr": "Wok"},
+      "summary": {"fr": "Wok utilisé pour cuissons rapides. Matière, diamètre et compatibilité induction à documenter."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "cookware_wok",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "not_applicable_or_unknown"}
+    },
+    {
+      "id": "EQP-SIPHON-UNIDENTIFIED",
+      "name": {"fr": "Siphon de cuisine"},
+      "summary": {"fr": "Siphon présent dans l’inventaire Cuisine. Volume, marque et type de cartouches à confirmer."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "culinary_siphon",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-FONDUE-UNIDENTIFIED",
+      "name": {"fr": "Appareil à fondue"},
+      "summary": {"fr": "Appareil à fondue mentionné dans le backlog matériel P019. Référence exacte à identifier."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "fondue_set",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-TOASTER-UNIDENTIFIED",
+      "name": {"fr": "Grille-pain"},
+      "summary": {"fr": "Grille-pain mentionné dans le backlog matériel P019. Référence exacte à identifier."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "toaster",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-MANDOLINE-UNIDENTIFIED",
+      "name": {"fr": "Mandoline"},
+      "summary": {"fr": "Mandoline utilisée pour tranchage régulier. Modèle et plages d’épaisseur à documenter."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "manual_utensil",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "not_applicable_or_unknown"}
+    },
+    {
+      "id": "EQP-GRATER-UNIDENTIFIED",
+      "name": {"fr": "Râpe de cuisine"},
+      "summary": {"fr": "Râpe manuelle présente dans l’inventaire. Type de lames à documenter si utile."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "manual_utensil",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "not_applicable_or_unknown"}
+    },
+    {
+      "id": "EQP-SCALE-SET-UNIDENTIFIED",
+      "name": {"fr": "Balances de cuisine"},
+      "summary": {"fr": "Balances utilisées pour pesées culinaires. Portée et précision de chaque balance à documenter."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "kitchen_scale",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_VALIDER"}
+    },
+    {
+      "id": "EQP-COOKWARE-SET-UNIDENTIFIED",
+      "name": {"fr": "Casseroles et poêles"},
+      "summary": {"fr": "Batterie de cuisine incluant casseroles inox et poêles antiadhésives/inox. Dimensions et références à documenter selon besoin."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "cookware_set",
+      "status": "owned_unidentified",
+      "technical": {"materials_known": ["inox", "antiadhésif"], "reference_status": "À_VALIDER"},
+      "manual": {"status": "not_applicable_or_unknown"}
+    },
+    {
+      "id": "EQP-PASTRY-TOOLS-SET",
+      "name": {"fr": "Matériel pâtisserie — cadre, tapis silicone, entonnoir piston"},
+      "summary": {"fr": "Ensemble d’ustensiles pâtisserie connus dans le projet. Dimensions/références individuelles à compléter au besoin."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "pastry_tools",
+      "status": "owned_unidentified",
+      "technical": {"items": "cadre pâtissier, tapis silicone, entonnoir piston", "reference_status": "À_VALIDER"},
+      "manual": {"status": "not_applicable_or_unknown"}
+    },
+    {
+      "id": "EQP-GLASS-JARS-SET",
+      "name": {"fr": "Pots et bocaux en verre"},
+      "summary": {"fr": "Pots/bocaux utilisés pour conservation et préparations. Volumes, types de fermeture et compatibilité thermique à documenter par usage."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "storage_container",
+      "status": "owned_unidentified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "not_applicable_or_unknown"}
+    },
+    {
+      "id": "EQP-FOOD-DEHYDRATOR-UNIDENTIFIED",
+      "name": {"fr": "Déshydrateur alimentaire"},
+      "summary": {"fr": "Déshydrateur alimentaire identifié dans l’historique du projet, mais référence/modèle non disponibles dans la présente source. À rapprocher de la notice/QR déjà évoqués."},
+      "brand": "À_VALIDER",
+      "model": "À_VALIDER",
+      "category": "food_dehydrator",
+      "status": "owned_or_planned_unverified",
+      "technical": {"reference_status": "À_VALIDER"},
+      "manual": {"status": "À_RATTACHER"}
+    }
+  ]
+}
