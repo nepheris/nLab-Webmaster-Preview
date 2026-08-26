@@ -15,8 +15,9 @@
   const loadStats = () => statsPromise ||= Promise.all([
     fetch('./data/demo.json', {cache:'no-store'}).then(r => r.ok ? r.json() : null).catch(() => null),
     fetch('./data/catalog-v1.json', {cache:'no-store'}).then(r => r.ok ? r.json() : null).catch(() => null),
-    fetch('./data/equipment-v1.json', {cache:'no-store'}).then(r => r.ok ? r.json() : null).catch(() => null)
-  ]).then(([demo, catalog, equipmentCatalog]) => {
+    fetch('./data/equipment-v1.json', {cache:'no-store'}).then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch('./data/equipment-catchup-v1.json', {cache:'no-store'}).then(r => r.ok ? r.json() : null).catch(() => null)
+  ]).then(([demo, catalog, equipmentCatalog, equipmentCatchup]) => {
     const recipeMap = new Map();
     for (const r of demo?.recipes || []) recipeMap.set(r.id, r);
     for (const r of catalog?.recipes || []) recipeMap.set(r.id, r);
@@ -24,6 +25,7 @@
     const equipmentMap = new Map();
     for (const e of demo?.equipment || []) equipmentMap.set(e.id, e);
     for (const e of equipmentCatalog?.equipment || []) equipmentMap.set(e.id, e);
+    for (const e of equipmentCatchup?.equipment || []) equipmentMap.set(e.id, e);
     const byStatus = recipes.reduce((acc, r) => {
       const k = r.status || 'sans_statut';
       acc[k] = (acc[k] || 0) + 1;
