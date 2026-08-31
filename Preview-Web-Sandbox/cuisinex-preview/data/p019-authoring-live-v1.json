@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema": "cuisinex-authoring-live-v1",
+    "source": "P019 Markdown authoring",
+    "language": "fr",
+    "updated_at": "2026-08-31",
+    "purpose": "Projection preview des fiches P019 nouvellement matérialisées depuis leur source Markdown, sans modifier leur statut métier."
+  },
+  "recipes": [
+    {
+      "id": "REC-404",
+      "status": "tested",
+      "title": {"fr": "Pâtes crémeuses saumon fumé, mascarpone & légumes — cuisson en deux phases"},
+      "summary": {"fr": "Essai réel du 31/08/2026 : phase fraîche jugée excellente. Préparation batch pour au moins deux repas, cuisson passive des pâtes, liaison à l’eau amidonnée et seconde portion prévue au Ninja."},
+      "chef": "🥘 Cuisinix · 🍝 Roberto · 🥗 Nutritioneix",
+      "scalable": false,
+      "tags": ["P019", "pâtes", "saumon fumé", "mascarpone", "courgette", "carotte", "champignons", "batch cooking", "Ninja", "tested"],
+      "ingredients": [
+        {"id": "A_VALIDER_PATES", "label": {"fr": "Pâtes sèches — type, marque et masse à confirmer"}, "display_quantity": "à compléter", "role": "primary"},
+        {"id": "A_VALIDER_ECHALOTE", "label": {"fr": "Échalotes moyennes"}, "display_quantity": "3 pièces", "role": "secondary"},
+        {"id": "CHAMPIGNON-PARIS-SURGELE", "label": {"fr": "Champignons de Paris surgelés"}, "mass_g": 250, "role": "primary"},
+        {"id": "COURGETTE-RAPEE", "label": {"fr": "Courgette épépinée, râpée gros"}, "mass_g": 250, "role": "primary"},
+        {"id": "CAROTTE-RAPEE", "label": {"fr": "Carotte râpée gros"}, "mass_g": 200, "role": "primary"},
+        {"id": "PRD-LIDL-MASCARPONE-DOUBLE-CREME-250", "label": {"fr": "Mascarpone Lidl double crème 38 % MG"}, "mass_g": 250, "role": "primary"},
+        {"id": "A_VALIDER_CREME_30", "label": {"fr": "Crème fraîche liquide 30 % MG"}, "mass_g": 100, "role": "secondary", "note": {"fr": "≈ 100 g ; marque à confirmer."}},
+        {"id": "SAUMON-FUME-NORVEGE-97", "label": {"fr": "Saumon fumé, 97 % saumon / 3 % sel"}, "mass_g": 100, "role": "primary"},
+        {"id": "EAU-CUISSON-PATES-AMIDONNEE", "label": {"fr": "Eau de cuisson amidonnée"}, "display_quantity": "selon besoin", "role": "optional", "note": {"fr": "Ajouter progressivement pour lier et détendre la sauce."}}
+      ],
+      "steps": [
+        {"fr": "Cuire les pâtes en cuisson passive : eau bouillante salée, 2 min actives, puis feu coupé et casserole couverte jusqu’à la texture recherchée. Lors de l’essai utilisateur, le temps indiqué sur le paquet a été utilisé comme phase passive ; référence exacte encore à documenter."},
+        {"fr": "Réserver un peu d’eau de cuisson amidonnée avant égouttage."},
+        {"fr": "Cuire les champignons surgelés jusqu’à évaporation quasi complète de leur eau."},
+        {"fr": "Ajouter les échalotes, puis la courgette et la carotte râpées gros ; cuire sans couvercle jusqu’à tendreté et évaporation de l’excès d’eau."},
+        {"fr": "À feu doux, incorporer le mascarpone puis la crème 30 % sans forte ébullition."},
+        {"fr": "Ajouter les pâtes et ajuster progressivement la texture avec l’eau amidonnée ; garder la sauce un peu plus souple pour les portions à réchauffer."},
+        {"fr": "Ajouter le saumon fumé très tardivement, idéalement hors du feu."},
+        {"fr": "Servir une première portion fraîche. Refroidir rapidement et couvrir le reste en bac inox."},
+        {"fr": "Phase 2 prévue : Ninja BAKE 160 °C pendant 8 à 12 min ; option 2 à 3 min à 180 °C pour gratiner davantage. À valider par essai réel."}
+      ],
+      "technical": [
+        {"label": {"fr": "Cuisson passive des pâtes"}, "value": "2 min actives + phase passive", "range": "TECH-004 ; calibrer selon paquet et texture"},
+        {"label": {"fr": "Liaison sauce"}, "value": "eau amidonnée, ajouts de 15–30 g", "range": "ajouter progressivement jusqu’au nappage"},
+        {"label": {"fr": "Réchauffage Ninja"}, "value": "160 °C · 8–12 min", "range": "phase 2 à valider ; finition 180 °C · 2–3 min si besoin"}
+      ],
+      "nutrition": {"status": "not_calculable", "message": {"fr": "Calcul incomplet tant que la masse et le type des pâtes, la masse des échalotes et la marque exacte de crème ne sont pas verrouillés."}},
+      "safety": {"allergens_status": "partial", "allergens_confirmed": ["gluten", "lait", "poisson"], "alcohol": false, "pork": false},
+      "relations": {"techniques": ["TECH-004"]},
+      "source_url": "./generated/recipes/REC-404.html",
+      "canonical_source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-404-pates-cremeuses-saumon-mascarpone-legumes-deux-phases.md",
+      "last_updated": "2026-08-31"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "TECH-004",
+      "status": "tested",
+      "title": {"fr": "Pâtes — cuisson passive à économie d'énergie, niveaux de cuisson et liaison à l'eau amidonnée"},
+      "summary": {"fr": "Méthode CuisineX : 2 min de cuisson active puis cuisson couverte feu coupé, réglage de la texture et utilisation de l’eau de cuisson amidonnée pour lier les sauces."},
+      "tags": ["pâtes", "cuisson passive", "économie d'énergie", "al dente", "amidon", "liaison sauce"],
+      "url": "./generated/techniques/TECH-004.html",
+      "canonical_source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/techniques/TECH-004-cuisson-passive-pates-economie-energie-amidon.md"
+    }
+  ]
+}
