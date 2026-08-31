@@ -1,8 +1,10 @@
 (() => {
   const originalFetch = window.fetch.bind(window);
+  const authoringLive = './data/p019-authoring-live-v1.json';
   const extraCatalogs = [
     './data/aubergine-candidates-v1.json',
-    './data/p019-work-in-progress-v1.json'
+    './data/p019-work-in-progress-v1.json',
+    authoringLive
   ];
   const extraEquipment = './data/equipment-catchup-v1.json';
 
@@ -36,6 +38,29 @@
     }), { status: 200, headers: { 'Content-Type': 'application/json; charset=utf-8' } });
   }
 
+  async function mergeAuthoringTechniques(input, init) {
+    const [baseResponse, liveResponse] = await Promise.all([
+      originalFetch(input, init),
+      originalFetch(authoringLive, { cache: 'no-store' }).catch(() => null)
+    ]);
+    if (!baseResponse.ok || !liveResponse?.ok) return baseResponse;
+    const [baseData, liveData] = await Promise.all([
+      baseResponse.clone().json(),
+      liveResponse.json()
+    ]);
+    const techniques = Array.isArray(baseData.techniques) ? [...baseData.techniques] : [];
+    const byId = new Map(techniques.map((x, i) => [x.id, i]));
+    for (const item of liveData.techniques || []) {
+      if (byId.has(item.id)) techniques[byId.get(item.id)] = { ...techniques[byId.get(item.id)], ...item };
+      else { techniques.push(item); byId.set(item.id, techniques.length - 1); }
+    }
+    return new Response(JSON.stringify({
+      ...baseData,
+      authoring_preview_extension: authoringLive,
+      techniques
+    }), { status: 200, headers: { 'Content-Type': 'application/json; charset=utf-8' } });
+  }
+
   async function mergeEquipmentCatalog(input, init) {
     const [baseResponse, extraResponse] = await Promise.all([
       originalFetch(input, init),
@@ -61,6 +86,7 @@
 
   window.fetch = async (input, init) => {
     const url = typeof input === 'string' ? input : input?.url || '';
+    if (url.endsWith('/data/demo.json') || url.endsWith('data/demo.json')) return mergeAuthoringTechniques(input, init);
     if (url.endsWith('/data/catalog-v1.json') || url.endsWith('data/catalog-v1.json')) return mergeRecipeCatalog(input, init);
     if (url.endsWith('/data/equipment-v1.json') || url.endsWith('data/equipment-v1.json')) return mergeEquipmentCatalog(input, init);
     return originalFetch(input, init);
