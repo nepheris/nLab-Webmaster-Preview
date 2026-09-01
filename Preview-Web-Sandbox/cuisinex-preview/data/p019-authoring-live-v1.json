@@ -3,7 +3,7 @@
     "schema": "cuisinex-authoring-live-v1",
     "source": "P019 Markdown authoring",
     "language": "fr",
-    "updated_at": "2026-08-31",
+    "updated_at": "2026-09-02",
     "purpose": "Projection preview des fiches P019 nouvellement matérialisées depuis leur source Markdown, sans modifier leur statut métier."
   },
   "recipes": [
@@ -48,6 +48,42 @@
       "source_url": "./generated/recipes/REC-404.html",
       "canonical_source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-404-pates-cremeuses-saumon-mascarpone-legumes-deux-phases.md",
       "last_updated": "2026-08-31"
+    },
+    {
+      "id": "REC-405",
+      "status": "canonical",
+      "title": {"fr": "Pâte brisée salée par sablage — 4 fonds de tartelettes"},
+      "summary": {"fr": "Base testée dans REC-402 le 30/08/2026 et explicitement validée le 02/09/2026 : 174 g de pâte pour quatre moules d’environ Ø 10 cm, abaissée à 2,5–3 mm."},
+      "chef": "🎂 Patisserix · 🥘 Cuisinix",
+      "servings": 4,
+      "scalable": true,
+      "tags": ["P019", "pâte brisée", "sablage", "tartelettes", "quiche", "canonical"],
+      "ingredients": [
+        {"id": "A_VALIDER_FARINE_T55", "label": {"fr": "Farine de blé T55"}, "mass_g": 100, "role": "primary"},
+        {"id": "A_VALIDER_BEURRE_DOUX_82", "label": {"fr": "Beurre doux 82 % MG, froid"}, "mass_g": 50, "role": "primary"},
+        {"id": "A_VALIDER_EAU", "label": {"fr": "Eau très froide"}, "mass_g": 22, "role": "secondary"},
+        {"id": "A_VALIDER_SEL", "label": {"fr": "Sel fin"}, "mass_g": 2, "role": "secondary"}
+      ],
+      "steps": [
+        {"fr": "Mélanger 100 g de farine T55 et 2 g de sel."},
+        {"fr": "Ajouter 50 g de beurre froid en dés et sabler rapidement jusqu’à texture de chapelure grossière."},
+        {"fr": "Ajouter 22 g d’eau très froide et rassembler sans pétrissage prolongé."},
+        {"fr": "Former un disque, couvrir et réfrigérer 20 à 30 min."},
+        {"fr": "Abaisser à 2,5–3 mm, foncer quatre moules métalliques cannelés d’environ Ø 10 cm et piquer légèrement."},
+        {"fr": "Remettre les fonds foncés au froid environ 10 min avant garniture et cuisson."}
+      ],
+      "technical": [
+        {"label": {"fr": "Masse totale de pâte"}, "value": "174 g", "range": "rendement validé pour 4 fonds"},
+        {"label": {"fr": "Épaisseur d’abaisse"}, "value": "2,5–3 mm", "range": "moules Ø ~10 cm"},
+        {"label": {"fr": "Repos avant abaisse"}, "value": "20–30 min", "range": "réfrigérateur"},
+        {"label": {"fr": "Repos après fonçage"}, "value": "≈ 10 min", "range": "réfrigérateur"}
+      ],
+      "nutrition": {"status": "incomplete", "message": {"fr": "Validation culinaire complète ; calcul nutritionnel final en attente des références exactes de farine T55 et beurre 82 % MG."}},
+      "safety": {"allergens_status": "partial", "allergens_confirmed": ["gluten", "lait"], "alcohol": false, "pork": false},
+      "relations": {"used_by": ["REC-402"]},
+      "source_url": "./generated/recipes/REC-405.html",
+      "canonical_source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-405-pate-brisee-salee-sablage-4-tartelettes.md",
+      "last_updated": "2026-09-02"
     }
   ],
   "techniques": [
