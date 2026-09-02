@@ -13,10 +13,24 @@ import {initContextTheme,refreshContextTheme} from './context-theme.js';
 import {initResponsiveNav,refreshResponsiveNav} from './responsive-nav.js';
 import {LANGUAGES,alternateLanguageOptions,languageDirection,uiLabel} from './i18n.js';
 
-const SITE_VERSION='V1 RC1.2 FR';
-const SITE_UPDATED_AT='2026-08-26 18:15 Europe/Paris';
+const SITE_VERSION='V1 RC2 Markdown';
+const SITE_UPDATED_AT='2026-09-02';
 
-function mergeCatalog(d,catalog){if(!catalog)return d;d.recipes=d.recipes||[];const ids=new Set(d.recipes.map(x=>x.id));for(const r of catalog.recipes||[]){if(!ids.has(r.id)){d.recipes.push(r);ids.add(r.id)}}return d}
+function mergeCatalog(d,catalog){
+  if(!catalog)return d;
+  d.recipes=d.recipes||[];
+  const byId=new Map(d.recipes.map((x,i)=>[x.id,i]));
+  for(const r of catalog.recipes||[]){
+    if(byId.has(r.id))d.recipes[byId.get(r.id)]={...d.recipes[byId.get(r.id)],...r};
+    else{d.recipes.push(r);byId.set(r.id,d.recipes.length-1)}
+  }
+  if(catalog.meta?.schema==='cuisinex-markdown-first-preview-v2'){
+    const allowed=new Set((catalog.recipes||[]).map(r=>r.id));
+    d.recipes=d.recipes.filter(r=>allowed.has(r.id));
+    d.recipeCatalogMeta=catalog.meta;
+  }
+  return d
+}
 async function loadDefault(force=false){
   let d=!force?loadSavedData():null;
   const [mainR,trialsR,catalogR,equipmentR,equipmentCatchupR]=await Promise.all([
