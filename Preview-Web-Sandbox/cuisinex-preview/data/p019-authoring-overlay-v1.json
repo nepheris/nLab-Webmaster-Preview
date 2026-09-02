@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "schema": "cuisinex-authoring-overlay-v1",
+    "source": "P019 Markdown authoring overlay",
+    "language": "fr",
+    "updated_at": "2026-09-02",
+    "purpose": "Expose les recettes P019 absentes des anciens catalogues et faire prévaloir l'identité/statut de la source Markdown sur les projections legacy divergentes."
+  },
+  "recipes": [
+    {
+      "id": "REC-001",
+      "status": "canonical",
+      "title": {"fr": "Ganache montée Milka Oreo — crème 35 %"},
+      "summary": {"fr": "Ganache montée canonique : 200 g de Milka Oreo et 300 g de crème UHT 35 % MG, sans sucre ajouté, avec émulsion chaude/froide puis maturation."},
+      "chef": "🎂 Patisserix",
+      "servings": 5,
+      "scalable": true,
+      "tags": ["P019", "ganache", "chocolat", "Milka Oreo", "canonical"],
+      "ingredients": [
+        {"id": "PRD-MILKA-OREO", "label": {"fr": "Milka Oreo"}, "mass_g": 200, "role": "primary"},
+        {"id": "PRD-CREME-UHT-35", "label": {"fr": "Crème liquide entière UHT 35 % MG"}, "mass_g": 300, "role": "primary", "note": {"fr": "100 g phase chaude + 200 g phase froide"}}
+      ],
+      "technical": [
+        {"label": {"fr": "Fonte chocolat"}, "value": "42 °C", "range": "40–45 °C"},
+        {"label": {"fr": "Crème chaude"}, "value": "70 °C", "range": "65–75 °C"},
+        {"label": {"fr": "Montage"}, "value": "4–6 °C", "range": "après ≥6 h de maturation"}
+      ],
+      "relations": {"techniques": ["TECH-001"], "tips": ["TIP-001"], "variants": ["REC-002"]},
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-001-ganache-milka-oreo.md",
+      "canonical_source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-001-ganache-milka-oreo.md"
+    },
+    {
+      "id": "REC-202",
+      "status": "candidate",
+      "title": {"fr": "Pâtes sèches aux morilles appertisées égouttées et crème 30 %"},
+      "summary": {"fr": "Candidate legacy réconciliée : pâtes sèches, morilles appertisées égouttées, crème 30 % MG, huile d'olive et beurre. Quantités et procédé restent à valider. L'ancienne projection Roquefort/jambon sous REC-202 était une collision d'identifiant ; cette famille est désormais REC-403."},
+      "chef": "🍝 Roberto · 🥘 Cuisinix · 🥗 Nutritioneix",
+      "scalable": false,
+      "tags": ["P019", "pâtes", "morilles", "crème 30 %", "candidate", "A_VALIDER"],
+      "ingredients": [
+        {"id": "A_VALIDER_PATES_SECHES", "label": {"fr": "Pâtes sèches"}, "display_quantity": "A_VALIDER", "role": "primary"},
+        {"id": "A_VALIDER_MORILLES_APPERTISEES", "label": {"fr": "Morilles appertisées égouttées"}, "display_quantity": "A_VALIDER", "role": "primary"},
+        {"id": "A_VALIDER_CREME_30", "label": {"fr": "Crème liquide 30 % MG"}, "display_quantity": "A_VALIDER", "role": "primary"},
+        {"id": "A_VALIDER_HUILE_OLIVE", "label": {"fr": "Huile d'olive"}, "display_quantity": "A_VALIDER", "role": "secondary"},
+        {"id": "A_VALIDER_BEURRE", "label": {"fr": "Beurre"}, "display_quantity": "A_VALIDER", "role": "secondary"}
+      ],
+      "nutrition": {"status": "not_calculable", "message": {"fr": "Formulation massique et références produits à valider avant calcul."}},
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/runtime-migration/rec-202-penne-cremeuses-au-roquefort-jambon-blanc-et-champignons.md",
+      "canonical_source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/runtime-migration/rec-202-penne-cremeuses-au-roquefort-jambon-blanc-et-champignons.md"
+    },
+    {
+      "id": "REC-401",
+      "status": "draft",
+      "title": {"fr": "Panna cotta mascarpone, zeste de citron vert, base spéculoos"},
+      "summary": {"fr": "Draft legacy non testé : 500 g de mascarpone 38 % MG, 600 ml de crème UHT 30 % MG, zeste de citron vert, base 250 g spéculoos + 90 g beurre. Gélifiant, rendement et procédé restent à valider."},
+      "chef": "🎂 Patisserix · 🥗 Nutritioneix · 🧪 Moleculix",
+      "scalable": false,
+      "tags": ["P019", "panna cotta", "mascarpone", "citron vert", "spéculoos", "draft", "A_VALIDER"],
+      "ingredients": [
+        {"id": "A_VALIDER_MASCARPONE_38", "label": {"fr": "Mascarpone 38 % MG"}, "mass_g": 500, "role": "primary"},
+        {"id": "A_VALIDER_CREME_UHT_30", "label": {"fr": "Crème UHT 30 % MG"}, "display_quantity": "600 ml", "role": "primary"},
+        {"id": "A_VALIDER_CITRON_VERT", "label": {"fr": "Citron vert — zeste uniquement"}, "display_quantity": "A_VALIDER", "role": "secondary"},
+        {"id": "A_VALIDER_SPECULOOS", "label": {"fr": "Spéculoos"}, "mass_g": 250, "role": "primary"},
+        {"id": "A_VALIDER_BEURRE_82", "label": {"fr": "Beurre 82 % MG"}, "mass_g": 90, "role": "primary"},
+        {"id": "A_VALIDER_GELIFIANT", "label": {"fr": "Gélifiant"}, "display_quantity": "A_VALIDER", "role": "technical"}
+      ],
+      "nutrition": {"status": "incomplete", "message": {"fr": "Estimations legacy partielles ; sucre total, densité crème et formulation finale incomplets."}},
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-401-panna-cotta-mascarpone-citron-vert-speculoos.md",
+      "canonical_source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-401-panna-cotta-mascarpone-citron-vert-speculoos.md"
+    },
+    {
+      "id": "REC-402",
+      "status": "tested",
+      "title": {"fr": "4 mini-quiches revisitées jambon, brie & échalote — Airfryer"},
+      "summary": {"fr": "V1 testée le 30/08/2026. Résultat globalement satisfaisant mais surface un peu trop cuite à 170 °C ; V2 recommandée à 160 °C. Rendement : quatre mini-quiches Ø ~10 cm."},
+      "chef": "🥘 Cuisinix · 🎂 Patisserix · 🥗 Nutritioneix",
+      "servings": 4,
+      "scalable": true,
+      "tags": ["P019", "quiche", "jambon", "brie", "échalote", "Airfryer", "tested"],
+      "ingredients": [
+        {"id": "A_VALIDER_FARINE_T55", "label": {"fr": "Farine T55"}, "mass_g": 110, "role": "primary"},
+        {"id": "A_VALIDER_BEURRE_DOUX_82", "label": {"fr": "Beurre doux 82 % MG"}, "mass_g": 54, "role": "primary"},
+        {"id": "A_VALIDER_EAU", "label": {"fr": "Eau très froide"}, "mass_g": 22, "role": "secondary"},
+        {"id": "A_VALIDER_JAMBON_BLANC", "label": {"fr": "Jambon blanc"}, "mass_g": 60, "role": "primary"},
+        {"id": "A_VALIDER_BRIE", "label": {"fr": "Brie"}, "mass_g": 50, "role": "primary"},
+        {"id": "A_VALIDER_ECHALOTE", "label": {"fr": "Échalote"}, "mass_g": 30, "role": "secondary"},
+        {"id": "A_VALIDER_OEUF_ENTIER", "label": {"fr": "Œufs entiers calibre M"}, "mass_g": 100, "role": "primary"},
+        {"id": "A_VALIDER_CREME_UHT_30", "label": {"fr": "Crème UHT 30 % MG"}, "mass_g": 100, "role": "primary"}
+      ],
+      "technical": [
+        {"label": {"fr": "V1 Airfryer"}, "value": "170 °C", "range": "surface trop colorée"},
+        {"label": {"fr": "V2 à tester"}, "value": "160 °C", "range": "ajustement recommandé"}
+      ],
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-402-4-mini-quiches-revisitees-jambon-brie-echalote-airfryer.md",
+      "canonical_source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-402-4-mini-quiches-revisitees-jambon-brie-echalote-airfryer.md"
+    },
+    {
+      "id": "REC-403",
+      "status": "canonical",
+      "title": {"fr": "Pâtes aux échalotes, champignons, jambon, crème & Roquefort"},
+      "summary": {"fr": "Recette testée et validée : 250 g de pâtes sèches, 30 g d'échalote, 200 g de champignons, 150 g de jambon, 200 ml de crème UHT 30 % MG et 80 g de Roquefort. Ratio canonique : 40 g de Roquefort / 100 ml de crème."},
+      "chef": "🥘 Cuisinix · 🍝 Roberto · 🥗 Nutritioneix",
+      "servings": 3,
+      "scalable": true,
+      "tags": ["P019", "pâtes", "champignons", "jambon", "Roquefort", "canonical"],
+      "ingredients": [
+        {"id": "CIQUAL_EQ_PATES", "label": {"fr": "Pâtes sèches standard"}, "mass_g": 250, "role": "primary"},
+        {"id": "CIQUAL_20097", "label": {"fr": "Échalote"}, "mass_g": 30, "role": "secondary"},
+        {"id": "CIQUAL_20056", "label": {"fr": "Champignons de Paris frais"}, "mass_g": 200, "role": "primary"},
+        {"id": "CIQUAL_28910", "label": {"fr": "Jambon cuit"}, "mass_g": 150, "role": "primary"},
+        {"id": "CIQUAL_EQ_CREME_30", "label": {"fr": "Crème UHT 30 % MG"}, "display_quantity": "200 ml", "role": "primary"},
+        {"id": "CIQUAL_12500", "label": {"fr": "Roquefort"}, "mass_g": 80, "role": "primary"}
+      ],
+      "technical": [
+        {"label": {"fr": "Ratio sauce validé"}, "value": "80 g / 200 ml", "range": "40 g Roquefort / 100 ml crème"}
+      ],
+      "nutrition": {"status": "ciqual_mapped_generic", "message": {"fr": "Mappings Ciqual génériques disponibles ; affinage possible avec les références commerciales exactes."}},
+      "source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-403-pates-echalotes-champignons-jambon-creme-roquefort.md",
+      "canonical_source_url": "https://github.com/nepheris/nLab/blob/main/Work/PRJ_Project/P019-nlab-cuisinix/mvp/authoring/fr/recipes/REC-403-pates-echalotes-champignons-jambon-creme-roquefort.md"
+    }
+  ]
+}
