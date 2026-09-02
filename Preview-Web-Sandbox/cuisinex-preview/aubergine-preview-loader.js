@@ -1,10 +1,12 @@
 (() => {
   const originalFetch = window.fetch.bind(window);
   const authoringLive = './data/p019-authoring-live-v1.json';
+  const authoringOverlay = './data/p019-authoring-overlay-v1.json';
   const extraCatalogs = [
     './data/aubergine-candidates-v1.json',
     './data/p019-work-in-progress-v1.json',
-    authoringLive
+    authoringLive,
+    authoringOverlay
   ];
   const extraEquipment = './data/equipment-catchup-v1.json';
 
@@ -17,20 +19,27 @@
     if (!baseResponse.ok) return baseResponse;
     const baseCatalog = await baseResponse.clone().json();
     const recipes = Array.isArray(baseCatalog.recipes) ? [...baseCatalog.recipes] : [];
-    const ids = new Set(recipes.map(r => r.id));
+    const byId = new Map(recipes.map((recipe, index) => [recipe.id, index]));
     const extensions = [...((baseCatalog.meta || {}).preview_extensions || [])];
+
     for (let i = 1; i < responses.length; i++) {
       const response = responses[i];
       if (!response?.ok) continue;
       const catalog = await response.json();
       for (const recipe of catalog.recipes || []) {
-        if (!ids.has(recipe.id)) {
+        if (byId.has(recipe.id)) {
+          // Later catalogs have higher authority. The Markdown authoring layers
+          // are intentionally loaded last so they replace stale legacy/runtime
+          // projections without changing the underlying culinary status.
+          recipes[byId.get(recipe.id)] = recipe;
+        } else {
           recipes.push(recipe);
-          ids.add(recipe.id);
+          byId.set(recipe.id, recipes.length - 1);
         }
       }
       extensions.push(catalog.meta?.source || extraCatalogs[i - 1]);
     }
+
     return new Response(JSON.stringify({
       ...baseCatalog,
       meta: { ...(baseCatalog.meta || {}), preview_extensions: extensions },
