@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://recettesducoeur.github.io/sitemap.xml
