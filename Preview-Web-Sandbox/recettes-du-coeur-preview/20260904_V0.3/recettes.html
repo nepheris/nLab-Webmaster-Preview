@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recettes — Les Recettes du Cœur</title>
+<meta name="description" content="Les Recettes du Cœur — cuisine simple, utile et anti-gaspillage.">
+<link rel="stylesheet" href="assets/css/vnext.css">
+</head><body data-page="recettes">
+<a class="skip-link" href="#contenu">Aller au contenu</a><div data-site-header></div>
+<main id="contenu">
+<section class="hero-mini"><div class="container"><p class="kicker">Le cœur du site</p><h1>Recettes</h1><p class="lead">Cherchez par nom, filtrez rapidement, ou partez directement de ce que vous avez dans le frigo et les placards.</p></div></section>
+<section class="page-section"><div class="container">
+<div class="search-panel" id="frigo">
+<div class="tabs">
+<button class="tab-btn is-active" data-tab="search">Recherche</button>
+<button class="tab-btn" data-tab="filters">Filtres</button>
+<button class="tab-btn" data-tab="fridge">J’ai ces ingrédients</button>
+</div>
+<div class="tab-panel is-active" data-panel="search"><div class="form-row"><input type="search" data-recipe-search placeholder="Ex. pâtes, thon, soupe…"><button class="button" type="button">Rechercher</button><button class="button secondary" type="button" data-recipe-reset>Réinitialiser</button></div></div>
+<div class="tab-panel" data-panel="filters"><p>Pour la V1, on garde les filtres qui apportent une décision immédiate.</p><div class="filters"><button class="filter-chip" data-diet="vegetarien" aria-pressed="false">Végétarien</button><button class="filter-chip" data-diet="vegan" aria-pressed="false">Vegan</button></div></div>
+<div class="tab-panel" data-panel="fridge"><label for="fridge">Ingrédients disponibles</label><textarea data-fridge-input placeholder="tomates, riz, oignon, œufs…"></textarea><div class="actions"><button class="button" data-fridge-search type="button">Comparer avec les recettes</button><button class="button secondary" data-fridge-reset type="button">Effacer</button></div><p class="lead" style="font-size:1rem">Le score se base sur les ingrédients principaux et secondaires déjà structurés dans le référentiel.</p></div>
+</div>
+<div class="section-heading" id="catalogue"><div><h2>Catalogue</h2><p data-recipes-status>Chargement…</p></div></div>
+<div class="grid grid-3" data-recipes-grid></div>
+</div></section>
+</main><div data-site-footer></div>
+<script src="assets/js/web_auto_translate_bar.js" defer></script>
+<script src="assets/js/vnext.js" defer></script></body></html>

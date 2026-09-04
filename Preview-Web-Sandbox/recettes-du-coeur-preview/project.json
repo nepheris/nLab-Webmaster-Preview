@@ -1,7 +1,7 @@
 {
   "project_id": "recettes-du-coeur-preview",
   "display_name": "Les Recettes du Cœur",
-  "description": "Preview de développement P002 : VNext basée sur le site public V73.2, espace Dev retiré du parcours, données structurées réutilisées et éditorial déplacé vers Markdown dans le package de déploiement.",
+  "description": "Preview de développement P002 : VNext complète basée sur le site public V73.2, espace Dev retiré du parcours, données structurées réutilisées, éditorial Markdown et expérimentation multilingue issue de RecetteX/SCR10.",
   "repository": "recettesducoeur/recettesducoeur.github.io",
   "visual": {
     "type": "project",
@@ -10,9 +10,9 @@
   "production": "https://recettesducoeur.github.io/",
   "preview_status": {
     "state": "to_review",
-    "label": "VNext 0.2 — site complet à valider avant déploiement public",
-    "candidate": "VNext-0.2",
+    "label": "VNext 0.3 — site multi-pages complet en reprise directe",
+    "candidate": "VNext-0.3",
     "publication_scope": "preview_only",
-    "path": "20260826_195000_V0.2/index.html"
+    "path": "20260904_V0.3/index.html"
   }
 }
