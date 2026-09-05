@@ -67,6 +67,38 @@
       "id":"REC-102","status":"draft","title":"Glace banane — crème 30 %","summary":"Variante sœur de REC-101, en attente de la référence exacte de crème 30 %."
     },
     {
+      "id":"REC-103",
+      "status":"canonical",
+      "title":"Glace à la fraise — crème UHT 30 %",
+      "summary":"Glace à la fraise testée et validée le 04/09/2026 : 300 g de fraises surgelées, 200 g de crème UHT 30 %, 90 g de sucre et 8 g de jus de citron. Équilibre jugé parfait, pas trop sucré, charge adaptée à la sorbetière SilverCrest 1 L.",
+      "servings":5,
+      "chef":"🎂 Patisserix",
+      "ingredients":[
+        {"id":"CIQUAL-FRAISE-SURG-A-MAPPER","mass_g":300,"label":"Fraises surgelées nature, non sucrées"},
+        {"id":"ING-CREME-UHT-30","mass_g":200,"label":"Crème liquide UHT 30 % MG"},
+        {"id":"CIQUAL-SUCRE-BLANC-A-MAPPER","mass_g":90,"label":"Sucre blanc classique"},
+        {"id":"CIQUAL-JUS-CITRON-A-MAPPER","mass_g":8,"label":"Jus de citron"}
+      ],
+      "formula":{"mix_mass_g":598,"cream_pct_mg":30,"validated_on":"2026-09-04"},
+      "temperatures":[
+        {"step":"Fraises avant mixage","target_c":4,"range":"2–5 °C"},
+        {"step":"Mix avant turbinage","target_c":4,"range":"≤ 5 °C"},
+        {"step":"Raffermissement","target_c":-18,"range":"congélateur"}
+      ],
+      "steps":[
+        "Décongeler partiellement les fraises en les conservant très froides.",
+        "Mixer 300 g de fraises avec 90 g de sucre et 8 g de jus de citron jusqu’à obtention d’une purée homogène.",
+        "Ajouter 200 g de crème liquide UHT 30 % bien froide et mixer brièvement 10 à 20 secondes.",
+        "Vérifier que le mix est à 5 °C maximum avant turbinage.",
+        "Laisser reposer 1 à 2 h vers 4 °C si possible.",
+        "Mettre la sorbetière en fonctionnement puis verser les 598 g de mix dans la cuve précongelée.",
+        "Turbiner jusqu’à texture de glace italienne ferme, typiquement 20 à 35 min.",
+        "Servir immédiatement ou raffermir 2 à 3 h à -18 °C.",
+        "Après une nuit à -18 °C, sortir la glace 10 à 15 min avant service."
+      ],
+      "validation":{"user_tested":true,"validated_on":"2026-09-04","feedback":"Parfaite, pas trop sucrée, quantité adaptée au turbinage dans la sorbetière SilverCrest 1 L."}
+    },
+    {
       "id":"REC-201","status":"draft","title":"Pâtes aux pleurotes, échalote et crème","summary":"Recette salée conçue pour conservation et réchauffage le lendemain. Formulation à verrouiller avec les produits exacts."
     }
   ],
