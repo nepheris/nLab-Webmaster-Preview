@@ -1,7 +1,0 @@
-import {$,toast} from './core.js';
-import {openFloating} from './floating.js';
-
-function currentShareUrl(){const u=new URL(location.href);u.searchParams.delete('v');u.searchParams.delete('view');u.hash='';return u.toString()}
-export function qrMarkup(){return `<aside id="qrPanel" class="qr-panel" data-floating-key="qr" aria-hidden="true"><div class="floating-head"><strong>QR code de la page</strong></div><div class="floating-body qr-body"><img id="qrImage" alt="QR code de la page"><p class="muted small">Le QR encode exactement l’URL CuisineX affichée ci-dessous. Le service externe sert uniquement à dessiner l’image du QR.</p><div class="field"><label>Cible encodée</label><input id="qrTarget" type="text" readonly></div><div class="filter-row"><a id="qrOpenUrl" class="btn" target="_blank" rel="noopener">Tester la cible</a><button id="qrCopyUrl" class="btn" type="button">Copier l’URL</button></div></div></aside>`}
-export function openQr(){const panel=$('#qrPanel'),img=$('#qrImage'),link=$('#qrOpenUrl'),target=$('#qrTarget');if(!panel||!img)return;const url=currentShareUrl();img.src=`https://quickchart.io/qr?size=220&text=${encodeURIComponent(url)}`;link.href=url;if(target)target.value=url;openFloating('qr')}
-export function initQr(){const b=$('#openQr');if(b)b.onclick=openQr;$('#qrCopyUrl')?.addEventListener('click',async()=>{const value=$('#qrTarget')?.value||currentShareUrl();try{await navigator.clipboard.writeText(value);toast('URL du QR copiée')}catch{toast('Copie automatique indisponible')}})}
