@@ -3,70 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>nLab CuisineX — MVP-002</title>
-  <meta name="description" content="CuisineX — laboratoire personnel de recettes techniques, ingrédients, techniques, ressources et matériel.">
-  <link rel="stylesheet" href="styles-v2.css">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>CuisineX — accès privé</title>
+  <style>
+    :root{color-scheme:light dark;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f4f7f9;color:#17202a}
+    main{width:min(92vw,680px);padding:32px;border:1px solid #d9e1e8;border-radius:18px;background:white;box-shadow:0 16px 45px #00000012}
+    h1{margin:0 0 10px;font-size:30px}p{line-height:1.55;color:#52606d}
+    .badge{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:999px;background:#eef6ff;color:#165d99;font-weight:700}
+    @media(prefers-color-scheme:dark){body{background:#10161d;color:#eef3f7}main{background:#17212b;border-color:#2d3b49}p{color:#b7c3ce}.badge{background:#18334a;color:#8dcbff}}
+  </style>
 </head>
-<body data-theme="light">
-<header id="siteHeader" class="sticky shadow">
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand" data-nav-tab="home"><span class="brand-dot"></span>🍽️ CuisineX</div>
-      <div class="search-shell">
-        <input id="search" class="search" type="search" placeholder="Rechercher dans CuisineX…" aria-label="Recherche">
-        <button id="searchSettingsBtn" class="icon-btn" title="Paramètres de recherche" aria-label="Paramètres de recherche">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h7M15 18h5"/><circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="13" cy="18" r="2"/></svg>
-        </button>
-        <div id="searchPanel" class="search-popover hidden">
-          <strong>Recherche</strong>
-          <div class="field"><label>Mode</label><select id="searchMode"><option value="free">Libre</option><option value="suggest">Libre + suggestions</option><option value="tokens">Jetons / tokens</option></select></div>
-          <div class="field"><label>Portée</label><select id="searchScope"><option value="all">Tout le site</option><option value="current">Section active</option></select></div>
-          <div id="tokens" class="tokens"></div>
-          <p class="small muted">En mode jetons, saisissez un terme puis Entrée. Tous les jetons sont combinés.</p>
-        </div>
-      </div>
-      <span class="grow"></span>
-      <select id="lang" class="btn" aria-label="Langue"><option value="fr">FR</option><option value="en">EN</option></select>
-      <button id="helpBtn" class="icon-btn" title="Aide contextuelle" aria-label="Aide contextuelle"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.5 2.5 0 1 1 4.6 1.4c-.8 1-2.3 1.4-2.3 3.1"/><path d="M12 17h.01"/></svg></button>
-      <button id="settingsBtn" class="icon-btn" title="Paramètres" aria-label="Paramètres"><svg class="icon" viewBox="0 0 24 24"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.1a1.7 1.7 0 0 0-1.1-1.55 1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3v-4h.1A1.7 1.7 0 0 0 4.65 8.5a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.1A1.7 1.7 0 0 0 15.5 4.65a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.12.37.34.7.6 1 .3.3.68.42 1.1.4h.1v4h-.1A1.7 1.7 0 0 0 19.4 15Z"/></svg></button>
-    </div>
-    <nav class="nav" aria-label="Sections">
-      <button data-tab="home" class="active">Accueil</button>
-      <button data-tab="recipes">Recettes</button>
-      <button data-tab="ingredients">Ingrédients</button>
-      <button data-tab="techniques">Techniques & astuces</button>
-      <button data-tab="equipment">Matériel</button>
-      <button data-tab="library">Bibliothèque</button>
-      <button data-tab="about">Concept</button>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap"><div id="app"><div class="panel">Chargement…</div></div></main>
-
-<div id="settingsPanel" class="floating-panel hidden" role="dialog" aria-label="Paramètres CuisineX">
-  <div class="floating-head"><strong>⚙ Paramètres CuisineX</strong><button class="mini-btn" data-dock-panel="settingsPanel" title="Ancrer"><svg class="icon" viewBox="0 0 24 24"><path d="m14 4 6 6-3 1-4 4-1 5-3-3-5-5 5-1 4-4 1-3Z"/></svg></button><button class="mini-btn" data-close-panel="settingsPanel" title="Fermer"><svg class="icon" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
-  <div class="floating-body">
-    <div class="settings-group"><h3>Thème général</h3><div class="field"><label>Mode</label><select id="themeMode"><option value="light">Clair</option><option value="dark">Sombre</option><option value="system">Système</option></select></div><div class="color-grid"><label class="color-input">Primaire <input id="primaryColor" type="color"></label><label class="color-input">Secondaire <input id="secondaryColor" type="color"></label><label class="color-input">Fond A <input id="bgColor" type="color"></label><label class="color-input">Fond B <input id="bg2Color" type="color"></label><label class="color-input">Panneaux <input id="panelColor" type="color"></label><label class="color-input">Texte <input id="textColor" type="color"></label></div><div class="field"><label>Angle du dégradé</label><input id="gradientAngle" type="range" min="0" max="360"></div><div class="field"><label>Transparence des panneaux</label><input id="panelAlpha" type="range" min="0.55" max="1" step="0.05"></div></div>
-    <div class="settings-group"><h3>Header & footer</h3><div class="checkrow"><label><input id="headerSticky" type="checkbox"> Header sticky</label><label><input id="headerShadow" type="checkbox"> Ombre</label></div><div class="field"><label>Footer</label><select id="footerMode"><option value="classic">Classique marqué</option><option value="minimal">Minimal / ligne</option><option value="hidden">Masqué</option></select></div><label><input id="toolbarVisible" type="checkbox"> Barre d’outils basse visible</label></div>
-    <div class="settings-group"><h3>Configuration modulaire</h3><label><input id="configMode" type="checkbox"> Activer le mode modification</label><p class="small muted">Des boutons d’édition apparaissent sur les sections et cartes.</p><p><strong>Cible :</strong> <span id="targetName" class="muted">aucune</span></p><div class="field"><label>Portée</label><div class="seg"><label><input type="radio" name="scope" value="global"> Site</label><label><input type="radio" name="scope" value="class"> Même classe</label><label><input type="radio" name="scope" value="element" checked> Élément</label></div></div><div class="color-grid"><label class="color-input">Fond <input id="localBg" type="color" value="#ffffff"></label><label class="color-input">Bordure <input id="localBorder" type="color" value="#cbdaf0"></label></div><div class="field"><label>Opacité</label><input id="localOpacity" type="range" min="0.5" max="1" step="0.05" value="1"></div><button id="applyLocalStyle" class="btn">Appliquer</button></div>
-    <div class="settings-group"><button id="resetTheme" class="btn">Réinitialiser le thème</button></div>
-  </div>
-</div>
-
-<div id="helpPanel" class="floating-panel hidden" role="dialog" aria-label="Aide contextuelle">
-  <div class="floating-head"><strong>❔ Aide contextuelle</strong><button class="mini-btn" data-dock-panel="helpPanel" title="Ancrer"><svg class="icon" viewBox="0 0 24 24"><path d="m14 4 6 6-3 1-4 4-1 5-3-3-5-5 5-1 4-4 1-3Z"/></svg></button><button class="mini-btn" data-close-panel="helpPanel" title="Fermer"><svg class="icon" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
-  <div id="helpContent" class="floating-body"></div>
-</div>
-
-<div id="quickTools" class="bottom-tools no-print" aria-label="Outils rapides">
-  <button id="collapseAll" class="icon-btn" title="Tout replier"><svg class="icon" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></svg></button>
-  <button id="expandAll" class="icon-btn" title="Tout déplier"><svg class="icon" viewBox="0 0 24 24"><path d="m6 10 6 6 6-6"/></svg></button>
-  <button id="toTop" class="icon-btn" title="Retour en haut"><svg class="icon" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/><path d="M12 8v11"/></svg></button>
-  <button id="hideToolbar" class="icon-btn" title="Masquer la barre"><svg class="icon" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
-</div>
-
-<footer id="siteFooter" class="footer-minimal"></footer>
-<script src="app-v2.js" defer></script>
+<body>
+<main>
+  <h1>🍽️ CuisineX</h1>
+  <p>Cette ancienne preview publique a été retirée. Le site CuisineX complet est désormais réservé à la version privée authentifiée.</p>
+  <p>L’accès au site actif nécessite un compte Google autorisé et une session CuisineX valide.</p>
+  <span class="badge">Accès privé requis</span>
+</main>
 </body>
 </html>
